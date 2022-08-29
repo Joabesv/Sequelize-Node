@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  mysql:
+    container_name: sequelize_learnings
+    image: mysql:8.0
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=randomPwd
+    volumes:
+      - alura-sql:/var/lib/mysql
+    ports:
+      - '3306:3306'
+
+volumes:
+  alura-sql: 
